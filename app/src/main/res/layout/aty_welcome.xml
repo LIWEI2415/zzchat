@@ -8,11 +8,11 @@
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="guide_pic" />
+        android:contentDescription="@string/guide_pic" />
 
     <TextView
         android:id="@+id/textView"
-        android:text="eye_of_agamotto"
+        android:text="@string/eye_of_agamotto"
         android:textColor="#ffffff"
         android:textSize="30sp"
         android:fontFamily="monospace"

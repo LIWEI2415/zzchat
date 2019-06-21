@@ -29,14 +29,13 @@ public class AtyWelcome extends AppCompatActivity {
 
     private void initLoad() {
         SharedPreferences sharedPreferences = getSharedPreferences("zzchat", MODE_PRIVATE);
-        boolean welcome = sharedPreferences.getBoolean("welcome", true);
-        if (!welcome) {
+        boolean guide = sharedPreferences.getBoolean("guide", true);
+        if (!guide) {
             handler.sendEmptyMessageDelayed(GO_HOME, DELAY);
 
         } else {
             handler.sendEmptyMessageDelayed(GO_GUIDE, DELAY);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putBoolean("welcome", false);
             editor.apply();
         }
     }

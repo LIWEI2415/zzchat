@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 import org.fitzeng.zzchat.R;
 
@@ -50,6 +51,12 @@ public class AtyLoginOrRegister extends AppCompatActivity implements View.OnClic
         tabHost.setup();
         tabHost.addTab(tabHost.newTabSpec("Login").setIndicator("Login").setContent(R.id.layout_login));
         tabHost.addTab(tabHost.newTabSpec("Register").setIndicator("Register").setContent(R.id.layout_register));
+
+        for (int i = 0; i < 2; i++) {
+            TextView tv = ((TextView) tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title));
+            tv.setAllCaps(false);
+            tv.setTextSize(20);
+        }
 
         btnLogin.setOnClickListener(this);
         btnRegister.setOnClickListener(this);

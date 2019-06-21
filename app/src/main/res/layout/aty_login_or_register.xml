@@ -15,7 +15,7 @@
 
         <TabWidget
             android:id="@android:id/tabs"
-            android:background="#700401c6"
+            android:background="#e501aaff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </TabWidget>
@@ -48,7 +48,7 @@
                     android:id="@+id/btn_login"
                     android:text="Login"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:background="#700401c6"
+                    android:background="#e501aaff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -82,7 +82,7 @@
                     android:id="@+id/btn_register"
                     android:text="Register"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:background="#700401c6"
+                    android:background="#e501aaff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
