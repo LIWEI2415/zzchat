@@ -19,8 +19,7 @@ public class ImageManager {
             R.drawable.bgcloud,
             R.drawable.bgbamboo,
             R.drawable.bgsunraise,
-            R.drawable.bgsnow,
-            R.drawable.avasteryellow
+            R.drawable.bgsnow
     };
 
     public static final int[] imageID = {

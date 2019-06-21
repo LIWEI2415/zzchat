@@ -48,6 +48,10 @@ public class TitleBar extends RelativeLayout {
         setButtonClickListener();
     }
 
+    public void setTitleText(String titleText) {
+        tvTitle.setText(titleText);
+    }
+
     /**
      * implement click events
      */
@@ -108,17 +112,17 @@ public class TitleBar extends RelativeLayout {
         btnLeft.setText(leftText);
         btnLeft.setTextSize(leftTextSize);
         btnLeft.setTextColor(leftTextColor);
-        btnLeft.setBackgroundDrawable(leftBackground);
+        btnLeft.setBackground(leftBackground);
 
         btnRight.setText(rightText);
         btnRight.setTextSize(rightTextSize);
         btnRight.setTextColor(rightTextColor);
-        btnRight.setBackgroundDrawable(rightBackground);
+        btnRight.setBackground(rightBackground);
 
         tvTitle.setText(titleText);
         tvTitle.setTextSize(titleTextSize);
         tvTitle.setTextColor(titleTextColor);
-        tvTitle.setBackgroundDrawable(titleBackground);
+        tvTitle.setBackground(titleBackground);
 
         tvTitle.setGravity(Gravity.CENTER);
 
@@ -149,3 +153,4 @@ public class TitleBar extends RelativeLayout {
         typedArray.recycle();
     }
 }
+

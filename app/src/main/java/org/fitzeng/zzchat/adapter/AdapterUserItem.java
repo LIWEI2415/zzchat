@@ -1,14 +1,15 @@
 package org.fitzeng.zzchat.adapter;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.fitzeng.zzchat.R;
+import org.fitzeng.zzchat.aty.AtyChatRoom;
 import org.fitzeng.zzchat.util.UserItemMsg;
 
 import java.util.List;
@@ -55,7 +56,9 @@ public class AdapterUserItem extends RecyclerView.Adapter<AdapterUserItem.BaseVi
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context, tvUsername.getText().toString(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context, AtyChatRoom.class);
+                    intent.putExtra("username", tvUsername.getText().toString());
+                    context.startActivity(intent);
                 }
             });
         }

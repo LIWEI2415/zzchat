@@ -24,7 +24,6 @@
 
         <TextView
             android:id="@+id/tv_item_username"
-            android:text="Username"
             android:textSize="16sp"
             android:textColor="#000000"
             android:maxLines="1"
@@ -35,7 +34,6 @@
 
         <TextView
             android:id="@+id/tv_item_sign"
-            android:text="I am iron man"
             android:textSize="12sp"
             android:textColor="#292929"
             android:maxLines="1"

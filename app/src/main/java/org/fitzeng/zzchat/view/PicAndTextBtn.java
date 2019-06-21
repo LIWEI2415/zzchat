@@ -111,4 +111,3 @@ public class PicAndTextBtn extends LinearLayout {
         typedArray.recycle();
     }
 }
-
