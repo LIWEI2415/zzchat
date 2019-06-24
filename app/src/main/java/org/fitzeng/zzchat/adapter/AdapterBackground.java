@@ -73,4 +73,3 @@ public class AdapterBackground extends RecyclerView.Adapter<AdapterBackground.Ba
         }
     }
 }
-

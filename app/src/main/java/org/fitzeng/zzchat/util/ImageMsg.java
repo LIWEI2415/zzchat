@@ -1,5 +1,4 @@
 package org.fitzeng.zzchat.util;
-
 public class ImageMsg {
 
     private int imageID;
@@ -12,4 +11,3 @@ public class ImageMsg {
         this.imageID = imageID;
     }
 }
-

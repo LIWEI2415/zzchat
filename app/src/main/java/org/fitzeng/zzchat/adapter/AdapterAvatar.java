@@ -74,4 +74,3 @@ public class AdapterAvatar extends RecyclerView.Adapter<AdapterAvatar.BaseViewHo
         }
     }
 }
-

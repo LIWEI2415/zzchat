@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 
 import org.fitzeng.zzchat.R;
 import org.fitzeng.zzchat.adapter.AdapterUserItem;
+import org.fitzeng.zzchat.server.ParaseData;
+import org.fitzeng.zzchat.server.ServerManager;
 import org.fitzeng.zzchat.util.UserItemMsg;
 
 import java.util.ArrayList;
@@ -44,13 +46,8 @@ public class LayoutContacts extends Fragment {
         rvGroup = (RecyclerView) rootView.findViewById(R.id.rv_list_groups);
 
         groupMsgList = new ArrayList<>();
-        for (int i = 1; i < 4; i++) {
-            UserItemMsg userItemMsg = new UserItemMsg();
-            userItemMsg.setIconID(R.drawable.avastertony);
-            userItemMsg.setUsername("Group " + i);
-            userItemMsg.setSign("onLine : " + i + "/10");
-            groupMsgList.add(userItemMsg);
-        }
+
+        loadGroups();
 
         AdapterUserItem adapterGroup = new AdapterUserItem(context, groupMsgList);
         rvGroup.setLayoutManager(new LinearLayoutManager(context));
@@ -70,18 +67,27 @@ public class LayoutContacts extends Fragment {
         });
     }
 
+    private void loadGroups() {
+        ServerManager serverManager = ServerManager.getServerManager();
+        String username = serverManager.getUsername();
+
+        List<String> groStr = ParaseData.getGroupList(context, username);
+        for (String string : groStr) {
+            UserItemMsg msg = new UserItemMsg();
+            msg.setIconID(5);
+            msg.setState("1");
+            msg.setUsername(string);
+            groupMsgList.add(msg);
+        }
+    }
+
     private void initContactViews() {
         patbBarContact = (PicAndTextBtn) rootView.findViewById(R.id.patb_bar__contacts);
         rvContact = (RecyclerView) rootView.findViewById(R.id.rv_list_contacts);
 
         contactMsgList = new ArrayList<>();
-        for (int i = 1; i < 8; i++) {
-            UserItemMsg userItemMsg = new UserItemMsg();
-            userItemMsg.setIconID(R.drawable.avasterdr);
-            userItemMsg.setUsername("Friend " + i);
-            userItemMsg.setSign("You know who I am !");
-            contactMsgList.add(userItemMsg);
-        }
+
+        loadFriends();
 
         AdapterUserItem adapterContact = new AdapterUserItem(context, contactMsgList);
         rvContact.setLayoutManager(new LinearLayoutManager(context));
@@ -99,5 +105,21 @@ public class LayoutContacts extends Fragment {
                 }
             }
         });
+    }
+
+    private void loadFriends() {
+        ServerManager serverManager = ServerManager.getServerManager();
+        String userName = serverManager.getUsername();
+
+        List<String> friStr = ParaseData.getFriendList(context, userName);
+        for (String string : friStr) {
+            UserItemMsg msg = new UserItemMsg();
+            msg.setUsername(string);
+            String[] str = ParaseData.getFriendProfile(context, string);
+            int i = Integer.parseInt(str[0]);
+            msg.setIconID(Integer.parseInt(str[0]));
+            msg.setSign(str[1]);
+            contactMsgList.add(msg);
+        }
     }
 }

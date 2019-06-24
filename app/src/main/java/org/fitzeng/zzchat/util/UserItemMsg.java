@@ -1,10 +1,23 @@
 package org.fitzeng.zzchat.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserItemMsg {
 
     private int iconID;
     private String username;
     private String sign;
+    private String state;
+    public static List<UserItemMsg> userItemMsgList = new ArrayList<>();
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
 
     public int getIconID() {
         return iconID;

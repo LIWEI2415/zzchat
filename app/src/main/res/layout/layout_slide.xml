@@ -8,6 +8,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/layout_slide_bg"
         android:background="@drawable/bgdr"
         android:layout_weight="4"
         android:layout_width="match_parent"
@@ -34,7 +35,6 @@
                     android:src="@drawable/avasterdr" />
                 <TextView
                     android:id="@+id/tv_username"
-                    android:text="Username"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -45,7 +45,6 @@
 
             <TextView
                 android:id="@+id/tv_sign"
-                android:text="I am iron man"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"

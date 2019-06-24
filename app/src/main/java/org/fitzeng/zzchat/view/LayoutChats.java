@@ -25,7 +25,7 @@ public class LayoutChats extends Fragment {
 
     private View rootView;
     private RecyclerView recyclerView;
-    private List<UserItemMsg> userItemMsgList = new ArrayList<>();
+    public static List<UserItemMsg> userItemMsgList;
     private Context context;
     private AdapterUserItem adapterUserItem;
 
@@ -38,10 +38,10 @@ public class LayoutChats extends Fragment {
     }
 
     private void initViews() {
-
         context = getContext();
         recyclerView = (RecyclerView) rootView.findViewById(R.id.chatsRecycleView);
-
+        userItemMsgList = new ArrayList<>();
+        loadData();
         ItemTouchHelper.Callback callback = new ItemTouchHelper.SimpleCallback(
                 ItemTouchHelper.UP|ItemTouchHelper.DOWN,ItemTouchHelper.RIGHT) {
             @Override
@@ -60,7 +60,6 @@ public class LayoutChats extends Fragment {
                 adapterUserItem.notifyItemMoved(fromPosition, toPosition);
                 return true;
             }
-
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAdapterPosition();
@@ -68,26 +67,19 @@ public class LayoutChats extends Fragment {
                 adapterUserItem.notifyItemRemoved(position);
             }
         };
-
-        loadData();
-
         adapterUserItem = new AdapterUserItem(context, userItemMsgList);
-
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapterUserItem);
     }
 
     private void loadData() {
-        for (int i = 0; i < 12; i++) {
-            UserItemMsg userItemMsg = new UserItemMsg();
-            userItemMsg.setIconID(R.drawable.avastertony);
-            userItemMsg.setUsername("Tony Stark");
-            userItemMsg.setSign("You know who I am !");
-            userItemMsgList.add(userItemMsg);
+        for (UserItemMsg item : UserItemMsg.userItemMsgList) {
+            userItemMsgList.add(item);
         }
     }
+
+
 }

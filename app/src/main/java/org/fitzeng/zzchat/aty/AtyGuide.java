@@ -94,4 +94,3 @@ public class AtyGuide extends AppCompatActivity implements ViewPager.OnPageChang
 
     }
 }
-

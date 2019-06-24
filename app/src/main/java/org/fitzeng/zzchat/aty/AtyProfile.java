@@ -60,4 +60,3 @@ public class AtyProfile extends AppCompatActivity {
         });
     }
 }
-

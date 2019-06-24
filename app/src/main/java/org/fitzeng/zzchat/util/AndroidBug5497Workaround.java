@@ -1,5 +1,4 @@
 package org.fitzeng.zzchat.util;
-
 //Workaround to get adjustResize functionality for input methos when the fullscreen mode is on
 //found by Ricardo
 //taken from http://stackoverflow.com/a/19494006

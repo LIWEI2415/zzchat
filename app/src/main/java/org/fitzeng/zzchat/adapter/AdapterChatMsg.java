@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import org.fitzeng.zzchat.R;
 import org.fitzeng.zzchat.util.ChatMsg;
+import org.fitzeng.zzchat.util.ImageManager;
 
 import java.util.List;
 
@@ -47,10 +48,10 @@ public class AdapterChatMsg extends ArrayAdapter<ChatMsg> {
 
         if (convertView == null) {
             assert msg != null;
-            if (msg.isMyInfo()) {
-                view = inflater.inflate(R.layout.chat_me, parent, false);
-            } else {
+            if (!msg.isMyInfo()) {
                 view = inflater.inflate(R.layout.chat_other, parent, false);
+            } else {
+                view = inflater.inflate(R.layout.chat_me, parent, false);
             }
             viewHolder = new ViewHolder();
             viewHolder.icon = (ImageView) view.findViewById(R.id.icon);
@@ -62,8 +63,8 @@ public class AdapterChatMsg extends ArrayAdapter<ChatMsg> {
             view = convertView;
             viewHolder = (ViewHolder) view.getTag();
         }
-        viewHolder.icon.setImageResource(chatMsgs.get(position).getIconID());
-        viewHolder.username.setText(chatMsgs.get(position).getUsername());
+        viewHolder.icon.setImageResource(ImageManager.imagesAvatar[chatMsgs.get(position).getIconID()]);
+        viewHolder.username.setText(msg.isMyInfo() ? chatMsgs.get(position).getUsername() : chatMsgs.get(position).getChatObj());
         viewHolder.content.setText(chatMsgs.get(position).getContent());
         return view;
     }
@@ -74,4 +75,3 @@ public class AdapterChatMsg extends ArrayAdapter<ChatMsg> {
         TextView content;
     }
 }
-

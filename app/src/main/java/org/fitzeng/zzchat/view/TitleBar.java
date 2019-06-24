@@ -112,17 +112,17 @@ public class TitleBar extends RelativeLayout {
         btnLeft.setText(leftText);
         btnLeft.setTextSize(leftTextSize);
         btnLeft.setTextColor(leftTextColor);
-        btnLeft.setBackground(leftBackground);
+        btnLeft.setBackgroundDrawable(leftBackground);
 
         btnRight.setText(rightText);
         btnRight.setTextSize(rightTextSize);
         btnRight.setTextColor(rightTextColor);
-        btnRight.setBackground(rightBackground);
+        btnRight.setBackgroundDrawable(rightBackground);
 
         tvTitle.setText(titleText);
         tvTitle.setTextSize(titleTextSize);
         tvTitle.setTextColor(titleTextColor);
-        tvTitle.setBackground(titleBackground);
+        tvTitle.setBackgroundDrawable(titleBackground);
 
         tvTitle.setGravity(Gravity.CENTER);
 
