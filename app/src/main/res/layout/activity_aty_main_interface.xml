@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".aty.AtyMainInterface"
+    android:background="@drawable/main_interface_1"
+    >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bt_bg"
+        android:layout_below="@+id/tabs_rg"/>
+
+    <RadioGroup
+        android:id="@+id/tabs_rg"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="#9fff"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/today_tab"
+            style="@style/Custom.TabRadioButton"
+            android:checked="true"
+            android:text="发现" />
+
+        <RadioButton
+            android:id="@+id/record_tab"
+            style="@style/Custom.TabRadioButton"
+            android:text="活动" />
+
+        <RadioButton
+            android:id="@+id/contact_tab"
+            style="@style/Custom.TabRadioButton"
+            android:text="集市" />
+
+        <RadioButton
+            android:id="@+id/settings_tab"
+            style="@style/Custom.TabRadioButton"
+            android:text="关注" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/bt_bg"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="#6fff"
+        />
+
+    <Button
+        android:id="@+id/bt_add"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/add"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/bt_msg"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/message"
+        android:layout_marginLeft="55dp"
+        />
+
+    <Button
+        android:id="@+id/bt_fri"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/friend"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="55dp"
+        />
+
+    <Button
+        android:id="@+id/bt_last"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/last"
+        android:layout_marginLeft="5dp"
+        />
+
+    <Button
+        android:id="@+id/bt_next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/next"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        />
+
+</RelativeLayout>

@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 
-public class ServerManager extends Thread {
+public class ServerManager implements Runnable {
     private static final String IP = "192.168.191.1";
     private Socket socket;
     private String username;
@@ -29,6 +29,10 @@ public class ServerManager extends Thread {
         receiveChatMsg = new ReceiveChatMsg();
     }
 
+    public void startThread()
+    {
+        new Thread(this).start();
+    }
     public void run() {
         try {
             socket = new Socket(IP, 27777);
@@ -63,19 +67,24 @@ public class ServerManager extends Thread {
         }
     }
 
-    public void sendMessage(Context context, String msg) {
-        try {
-            while (socket == null) ;
-            if (bufferedWriter != null) {
+    public void sendMessage(Context context, final String msg) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    while (socket == null) ;
+                    if (bufferedWriter != null) {
 //                Log.d("TAG", "send : " + msg);
-                bufferedWriter.write(msg + "\n");
-                bufferedWriter.flush();
-                bufferedWriter.write("-1\n");
-                bufferedWriter.flush();
+                        bufferedWriter.write(msg + "\n");
+                        bufferedWriter.flush();
+                        bufferedWriter.write("-1\n");
+                        bufferedWriter.flush();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        }).start();
     }
 
     public String getMessage() {

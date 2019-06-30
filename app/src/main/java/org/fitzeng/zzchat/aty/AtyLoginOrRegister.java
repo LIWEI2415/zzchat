@@ -66,7 +66,7 @@ public class AtyLoginOrRegister extends AppCompatActivity implements View.OnClic
 
         btnLogin.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
-        serverManager.start();
+        serverManager.startThread();
     }
 
     @Override
