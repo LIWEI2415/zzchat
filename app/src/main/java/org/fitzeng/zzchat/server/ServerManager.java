@@ -11,7 +11,7 @@ import java.io.OutputStreamWriter;
 import java.net.Socket;
 
 public class ServerManager implements Runnable {
-    private static final String IP = "192.168.191.1";
+    private static final String IP = "10.13.5.186";
     private Socket socket;
     private String username;
     private int iconID;

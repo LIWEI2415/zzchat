@@ -91,8 +91,9 @@ public class AtyLogin extends AppCompatActivity implements View.OnClickListener{
                    /* Intent data=new Intent();
                     data.putExtra("isLogin",true);
                     setResult(RESULT_OK,data);*/
-                    AtyLogin.this.finish();
+                    serverManager.setUsername(user_name);
                     startActivity(new Intent(AtyLogin.this, AtyMainInterface.class));
+                    AtyLogin.this.finish();
                     return;
                 }
                 else{

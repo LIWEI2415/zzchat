@@ -1,20 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
 
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
-        >
+        android:background="@android:color/darker_gray">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/action_undo"
@@ -22,8 +19,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/undo"
-                />
+                android:src="@drawable/undo" />
 
             <ImageButton
                 android:id="@+id/action_redo"
@@ -31,8 +27,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/redo"
-                />
+                android:src="@drawable/redo" />
 
             <ImageButton
                 android:id="@+id/action_bold"
@@ -40,8 +35,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/bold"
-                />
+                android:src="@drawable/bold" />
 
             <ImageButton
                 android:id="@+id/action_italic"
@@ -49,8 +43,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/italic"
-                />
+                android:src="@drawable/italic" />
 
             <ImageButton
                 android:id="@+id/action_subscript"
@@ -58,8 +51,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/subscript"
-                />
+                android:src="@drawable/subscript" />
 
             <ImageButton
                 android:id="@+id/action_superscript"
@@ -67,8 +59,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/superscript"
-                />
+                android:src="@drawable/superscript" />
 
             <ImageButton
                 android:id="@+id/action_strikethrough"
@@ -76,8 +67,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/strikethrough"
-                />
+                android:src="@drawable/strikethrough" />
 
             <ImageButton
                 android:id="@+id/action_underline"
@@ -85,25 +75,25 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/underline"
-                />
+                android:src="@drawable/underline" />
 
             <Spinner
                 android:id="@+id/spinner1"
                 android:layout_width="105dp"
                 android:layout_height="48dp"
-                android:spinnerMode="dropdown"
+                android:entries="@array/type"
                 android:padding="0dp"
                 android:prompt="@string/spinnerTitle1"
-                android:entries="@array/type" />
+                android:spinnerMode="dropdown" />
+
             <Spinner
+                android:id="@+id/spinner2"
                 android:layout_width="60dp"
                 android:layout_height="48dp"
-                android:id="@+id/spinner2"
-                android:spinnerMode="dropdown"
+                android:entries="@array/typesize"
                 android:padding="0dp"
                 android:prompt="@string/spinnerTitle2"
-                android:entries="@array/typesize"/>
+                android:spinnerMode="dropdown" />
 
 
             <!--      <ImageButton
@@ -157,8 +147,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/txt_color"
-                />
+                android:src="@drawable/txt_color" />
 
             <ImageButton
                 android:id="@+id/action_bg_color"
@@ -166,8 +155,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/bg_color"
-                />
+                android:src="@drawable/bg_color" />
 
 
             <ImageButton
@@ -176,8 +164,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/indent"
-                />
+                android:src="@drawable/indent" />
 
             <ImageButton
                 android:id="@+id/action_outdent"
@@ -185,8 +172,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/outdent"
-                />
+                android:src="@drawable/outdent" />
 
             <ImageButton
                 android:id="@+id/action_align_left"
@@ -194,8 +180,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/justify_left"
-                />
+                android:src="@drawable/justify_left" />
 
             <ImageButton
                 android:id="@+id/action_align_center"
@@ -203,8 +188,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/justify_center"
-                />
+                android:src="@drawable/justify_center" />
 
             <ImageButton
                 android:id="@+id/action_align_right"
@@ -212,8 +196,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/justify_right"
-                />
+                android:src="@drawable/justify_right" />
 
             <ImageButton
                 android:id="@+id/action_insert_bullets"
@@ -221,8 +204,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/bullets"
-                />
+                android:src="@drawable/bullets" />
 
             <ImageButton
                 android:id="@+id/action_insert_numbers"
@@ -230,8 +212,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/numbers"
-                />
+                android:src="@drawable/numbers" />
             <!--
                   <ImageButton
                     android:id="@+id/action_blockquote"
@@ -248,8 +229,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/insert_image"
-                />
+                android:src="@drawable/insert_image" />
 
             <ImageButton
                 android:id="@+id/action_save"
@@ -257,8 +237,7 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@drawable/save"
-                />
+                android:src="@drawable/save" />
 
             <ImageButton
                 android:id="@+id/action_insert_checkbox"
@@ -266,96 +245,92 @@
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="@null"
-                android:src="@android:drawable/checkbox_on_background"
-                />
+                android:src="@android:drawable/checkbox_on_background" />
 
         </LinearLayout>
     </HorizontalScrollView>
+
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:id="@+id/colorplate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone">
+
             <Button
                 android:id="@+id/action_black"
                 android:layout_width="@dimen/buttonsize"
                 android:layout_height="@dimen/buttonsize"
                 android:background="@color/color_black"
-                android:contentDescription="@null"
-                />
+                android:contentDescription="@null" />
 
             <Button
                 android:id="@+id/action_white"
                 android:layout_width="@dimen/buttonsize"
                 android:layout_height="@dimen/buttonsize"
                 android:background="@color/color_white"
-                android:contentDescription="@null"
-                />
+                android:contentDescription="@null" />
 
             <Button
                 android:id="@+id/action_red"
                 android:layout_width="@dimen/buttonsize"
                 android:layout_height="@dimen/buttonsize"
                 android:background="@color/color_red"
-                android:contentDescription="@null"
-                />
+                android:contentDescription="@null" />
 
             <Button
                 android:id="@+id/action_orange"
                 android:layout_width="@dimen/buttonsize"
                 android:layout_height="@dimen/buttonsize"
                 android:background="@color/color_orange"
-                android:contentDescription="@null"
-                />
+                android:contentDescription="@null" />
 
             <Button
                 android:id="@+id/action_yellow"
                 android:layout_width="@dimen/buttonsize"
                 android:layout_height="@dimen/buttonsize"
                 android:background="@color/color_yellow"
-                android:contentDescription="@null"
-                />
+                android:contentDescription="@null" />
 
             <Button
                 android:id="@+id/action_green"
                 android:layout_width="@dimen/buttonsize"
                 android:layout_height="@dimen/buttonsize"
                 android:background="@color/color_green"
-                android:contentDescription="@null"
-                />
+                android:contentDescription="@null" />
+
             <Button
                 android:id="@+id/action_lightgreen"
                 android:layout_width="@dimen/buttonsize"
                 android:layout_height="@dimen/buttonsize"
                 android:background="@color/color_lightgreen"
-                android:contentDescription="@null"
-                />
+                android:contentDescription="@null" />
+
             <Button
                 android:id="@+id/action_blue"
                 android:layout_width="@dimen/buttonsize"
                 android:layout_height="@dimen/buttonsize"
                 android:background="@color/color_blue"
-                android:contentDescription="@null"
-                />
+                android:contentDescription="@null" />
+
             <Button
                 android:id="@+id/action_purple"
                 android:layout_width="@dimen/buttonsize"
                 android:layout_height="@dimen/buttonsize"
                 android:background="@color/color_purple"
-                android:contentDescription="@null"
-                />
+                android:contentDescription="@null" />
         </LinearLayout>
     </HorizontalScrollView>
 
-    <com.example.dirayeditor.activities.RichEditor
+    <org.fitzeng.zzchat.aty.RichEditor
         android:id="@+id/editor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="0dp"
         android:layout_margin="0dp"
+        android:padding="0dp"
 
         />
     <!--
@@ -371,8 +346,7 @@
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        />
+        android:layout_marginTop="15dp" />
 
 
 </LinearLayout>

@@ -13,27 +13,40 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".aty.AtyWelcome">
-        </activity>
+        android:theme="@style/AppTheme"
+        >
+        <activity android:name=".aty.Personal"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".aty.AtyWelcome"></activity>
         <activity android:name=".aty.AtyGuide" />
         <activity android:name=".aty.AtyLoginOrRegister" />
-        <activity android:name=".aty.AtyMain" />
-        <activity android:name=".aty.AtyDressUp" />
-        <activity android:name=".aty.AtyProfile" />
-        <activity android:name=".aty.AtySetting" />
-        <activity android:name=".aty.AtyChatRoom" />
-        <activity android:name=".aty.AtyRegist"/>
-        <activity android:name=".aty.AtyMainInterface"/>
-        <activity android:name=".aty.AtyLogin">
+        <activity android:name=".aty.AtyMain"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".aty.AtyDressUp"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".aty.AtyProfile"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".aty.AtySetting"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".aty.AtyChatRoom"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".aty.AtyRegist"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".aty.AtyMainInterface"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".aty.AtyLogin"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".aty.ChooseDiary"/>
-        <activity android:name=".aty.MyEditor"/>
+        <activity android:name=".aty.ChooseDiary"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".aty.MyEditor"
+            android:screenOrientation="portrait"
+            ></activity>
     </application>
 
 </manifest>

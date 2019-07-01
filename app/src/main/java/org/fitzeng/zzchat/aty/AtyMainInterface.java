@@ -1,6 +1,9 @@
 package org.fitzeng.zzchat.aty;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -17,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class AtyMainInterface extends AppCompatActivity {
+public class AtyMainInterface extends AppCompatActivity implements View .OnClickListener{
 
     private ViewPager mViewPager;
     private RadioGroup mTabRadioGroup;
@@ -25,6 +28,9 @@ public class AtyMainInterface extends AppCompatActivity {
     private List<Fragment> mFragments;
     private FragmentPagerAdapter mAdapter;
 
+    private Button bt_add;
+    private Button bt_chat;
+    private Button bt_personal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +54,13 @@ public class AtyMainInterface extends AppCompatActivity {
         // register listener
         mViewPager.addOnPageChangeListener(mPageChangeListener);
         mTabRadioGroup.setOnCheckedChangeListener(mOnCheckedChangeListener);
+
+        bt_add = (Button) findViewById(R.id.bt_add);
+        bt_add.setOnClickListener(this);
+        bt_chat = (Button) findViewById(R.id.bt_chat);
+        bt_chat.setOnClickListener(this);
+        bt_personal = (Button) findViewById(R.id.bt_personal);
+        bt_personal.setOnClickListener(this);
     }
 
     @Override
@@ -85,6 +98,24 @@ public class AtyMainInterface extends AppCompatActivity {
             }
         }
     };
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.bt_add:
+                Intent intent_write = new Intent(AtyMainInterface.this,ChooseDiary.class);
+                startActivity(intent_write);
+                break;
+            case R.id.bt_chat:
+                Intent intent_chat = new Intent(AtyMainInterface.this,AtyMain.class);
+                startActivity(intent_chat);
+                break;
+            case R.id.bt_personal:
+                Intent intent_personal = new Intent(AtyMainInterface.this,Personal.class);
+                startActivity(intent_personal);
+                break;
+        }
+    }
 
     private class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 

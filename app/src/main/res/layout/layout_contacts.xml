@@ -22,13 +22,13 @@
             android:layout_height="46dp">
         </org.fitzeng.zzchat.view.PicAndTextBtn>
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_list_groups"
             android:background="#e9e9e9"
             android:layout_marginBottom="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        </android.support.v7.widget.RecyclerView>
+        </androidx.recyclerview.widget.RecyclerView>
 
 
         <org.fitzeng.zzchat.view.PicAndTextBtn
@@ -43,13 +43,13 @@
             android:layout_height="46dp">
         </org.fitzeng.zzchat.view.PicAndTextBtn>
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_list_contacts"
             android:background="#e9e9e9"
             android:layout_marginBottom="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        </android.support.v7.widget.RecyclerView>
+        </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 
